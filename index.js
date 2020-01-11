@@ -32,9 +32,8 @@ class Square extends Polygon {
 
   get isValid(){
 
-  if (!Array.isArray(this.sides) || (this.count !==4)) return
-
-  return (( this.sides[0] === this.sides[1] && this.sides[0] === this.sides[2] && this.sides[0] === this.sides[3]))
+  if (this.count !==4) return
+  return this.sides.every(side => side === this.sides[0])
 
   }
 
